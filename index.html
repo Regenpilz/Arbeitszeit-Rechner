@@ -19,29 +19,30 @@
       margin-top: 20px;
     }
 
+    /* Container für das Layout */
     .container {
       width: 100%;
-      max-width: 1000px; /* Maximale Breite des Containers */
+      max-width: 1000px;
       margin: 0 auto;
       padding: 10px;
       box-sizing: border-box;
     }
 
-    /* Sicherstellen, dass das Tool sich anpasst */
+    /* Sicherstellen, dass das Tool korrekt angezeigt wird */
     .calckit {
       width: 100%;
-      height: 500px; /* Höhe für Desktop */
-      max-width: 100%; /* Keine Breite überschreiten */
+      max-width: 100%; /* Maximale Breite des Tools */
+      height: 500px; /* Höhe für das Tool */
     }
 
-    /* Media Query für kleinere Bildschirme */
+    /* Anpassungen für mobile Geräte */
     @media screen and (max-width: 768px) {
       h1 {
         font-size: 1.5em;
       }
 
       .calckit {
-        height: 400px; /* Höhe des Tools auf mobilen Geräten reduzieren */
+        height: 400px; /* Höhe des Tools auf mobilen Geräten */
       }
     }
   </style>
@@ -53,15 +54,13 @@
 
   <div class="container">
     <!-- Das eingebettete Tool von CalcKit -->
-    <div class="calckit" data-tool="5698c944e7477d9aca4515f0a96b806cf482775c">
-      <div class="calckit-header">Stunden-Rechner 2</div>
-      <div class="calckit-footer">
-        <a class="calckit-tool" href="https://calckit.io/tool/5698c944e7477d9aca4515f0a96b806cf482775c">Stunden-Rechner 2</a> von <a class="calckit-link" href="https://calckit.io/">CalcKit.io</a>
-      </div>
-    </div>
+<div class="calckit" data-tool="5698c944e7477d9aca4515f0a96b806cf482775c" data-width="400">
+  <div class="calckit-header">Stunden-Rechner 2</div>
+  <div class="calckit-footer">
+    <a class="calckit-tool" href="https://calckit.io/tool/5698c944e7477d9aca4515f0a96b806cf482775c">Stunden-Rechner 2</a> by <a class="calckit-link" href="https://calckit.io/">CalcKit.io</a>
   </div>
-
-  <script defer src="https://calckit.io/embed/sdk.js"></script>
+</div>
+<script defer src="https://calckit.io/embed/sdk.js"></script>
 
 </body>
 </html>
