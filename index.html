@@ -5,7 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Stundenrechner</title>
   <style>
-    /* Der gesamte body hat keine zusätzlichen Styles für Layout */
     body {
       margin: 0;
       padding: 0;
@@ -13,7 +12,6 @@
       text-align: center;
     }
 
-    /* Container für das eingebettete Tool */
     .calckit-container {
       width: 100%;
       padding: 10px;
@@ -23,10 +21,10 @@
       justify-content: center; /* Zentriert das Tool */
     }
 
-    .calckit {
+    iframe {
       width: 100%;
-      max-width: 1000px; /* Maximale Breite des eingebetteten Tools */
-      height: 500px; /* Feste Höhe für das Tool */
+      max-width: 1000px;
+      height: 500px;
       border: none;
     }
   </style>
@@ -35,16 +33,9 @@
 
   <!-- Container für das eingebettete Tool -->
   <div class="calckit-container">
-    <div class="calckit" data-tool="5698c944e7477d9aca4515f0a96b806cf482775c">
-      <div class="calckit-header">Stunden-Rechner 2</div>
-      <div class="calckit-footer">
-        <a class="calckit-tool" href="https://calckit.io/tool/5698c944e7477d9aca4515f0a96b806cf482775c">Stunden-Rechner 2</a> von <a class="calckit-link" href="https://calckit.io/">CalcKit.io</a>
-      </div>
-    </div>
+    <!-- iframe zur Anzeige des Tools -->
+    <iframe src="https://calckit.io/tool/5698c944e7477d9aca4515f0a96b806cf482775c"></iframe>
   </div>
-
-  <!-- JavaScript für das Tool laden -->
-  <script defer src="https://calckit.io/embed/sdk.js"></script>
 
 </body>
 </html>
