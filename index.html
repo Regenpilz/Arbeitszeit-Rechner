@@ -6,36 +6,74 @@
   <title>Stundenrechner</title>
   <style>
     body {
+      font-family: Arial, sans-serif;
       margin: 0;
       padding: 0;
       background-color: #f4f4f4;
       text-align: center;
     }
 
-    .calckit-container {
+    .container {
       width: 100%;
-      padding: 10px;
-      box-sizing: border-box;
-      margin: 0 auto;
-      display: flex;
-      justify-content: center; /* Zentriert das Tool */
+      max-width: 1200px; /* Maximale Breite der gesamten Seite */
+      margin: 0 auto; /* Zentriert den Inhalt */
+      padding: 20px;
     }
 
-    iframe {
+    h1 {
+      color: #333;
+      font-size: 2em;
+      margin-bottom: 20px;
+    }
+
+    .calckit-container {
+      width: 100%;
+      max-width: 1000px; /* Maximale Breite für das eingebettete Tool */
+      margin: 0 auto;
+      padding: 10px;
+    }
+
+    .calckit {
       width: 100%;
       max-width: 1000px;
       height: 500px;
       border: none;
     }
+
+    /* Media Query für kleinere Bildschirme */
+    @media screen and (max-width: 768px) {
+      h1 {
+        font-size: 1.5em;
+      }
+
+      .calckit-container {
+        padding: 5px;
+      }
+
+      .calckit {
+        height: 400px; /* Kleinere Höhe auf mobilen Geräten */
+      }
+    }
   </style>
 </head>
 <body>
 
-  <!-- Container für das eingebettete Tool -->
-  <div class="calckit-container">
-    <!-- iframe zur Anzeige des Tools -->
-    <iframe src="https://calckit.io/tool/5698c944e7477d9aca4515f0a96b806cf482775c"></iframe>
+  <div class="container">
+    <h1>Willkommen beim Stundenrechner</h1>
+    <p>Nutze den folgenden Rechner, um deine Stunden zu berechnen.</p>
+
+    <!-- Container für das eingebettete Tool -->
+    <div class="calckit-container">
+      <div class="calckit" data-tool="5698c944e7477d9aca4515f0a96b806cf482775c">
+        <div class="calckit-header">Stunden-Rechner 2</div>
+        <div class="calckit-footer">
+          <a class="calckit-tool" href="https://calckit.io/tool/5698c944e7477d9aca4515f0a96b806cf482775c">Stunden-Rechner 2</a> von <a class="calckit-link" href="https://calckit.io/">CalcKit.io</a>
+        </div>
+      </div>
+    </div>
   </div>
+
+  <script defer src="https://calckit.io/embed/sdk.js"></script>
 
 </body>
 </html>
